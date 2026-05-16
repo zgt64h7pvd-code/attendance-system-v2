@@ -227,7 +227,7 @@ clockOutBtn.addEventListener("click", () => {
 
     // 5時間
     const fiveHours =
-        1000;
+        5 * 60 * 60 * 1000;
 
     // 残業申請が必要
     if (
