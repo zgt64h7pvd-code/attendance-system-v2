@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勤怠管理システム</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- 残業申請画面 -->
+<div id="overtimeModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>残業申請</h2>
+
+        <p id="overtimeUser"></p>
+
+        <label>残業理由</label>
+
+        <textarea id="overtimeReason"></textarea>
+
+        <label>許可者</label>
+
+        <select id="managerSelect">
+
+            <option value="">選択してください</option>
+
+            <option value="店長">店長</option>
+
+            <option value="副店長">副店長</option>
+
+            <option value="当日責任者">当日責任者</option>
+
+        </select>
+
+        <button id="submitOvertimeBtn">
+            申請する
+        </button>
+
+    </div>
+
+</div>
+
+<body>
+
+    <!-- 名前登録 -->
+    <div class="register-area">
+
+        <input type="text" id="newUserName" placeholder="名前を入力">
+
+        <button id="addUserBtn">
+            名前登録
+        </button>
+
+        <select id="userSelect">
+            <option value="">選択してください</option>
+        </select>
+
+    </div>
+
+    <div class="container">
+
+        <!-- 左 -->
+        <div class="left-panel">
+
+            <fieldset class="status-box">
+                <legend>出勤予定</legend>
+                <ul id="scheduledList"></ul>
+            </fieldset>
+
+            <fieldset class="status-box">
+                <legend>退勤済み</legend>
+                <ul id="finishedList"></ul>
+            </fieldset>
+
+        </div>
+
+        <!-- 中央 -->
+        <div class="center-panel">
+
+            <button id="cancelBtn">
+                前回打刻取り消し
+            </button>
+
+            <div class="log-box">
+                <ul id="recordList"></ul>
+            </div>
+
+            <p id="result"></p>
+
+        </div>
+
+        <!-- 右 -->
+        <div class="right-panel">
+
+            <button id="clockInBtn" class="action-btn">
+                出勤
+            </button>
+
+            <button id="clockOutBtn" class="action-btn">
+                退勤
+            </button>
+
+            <button id="breakStartBtn" class="action-btn">
+                休憩入り
+            </button>
+
+            <button id="breakEndBtn" class="action-btn">
+                休憩戻り
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
