@@ -117,7 +117,7 @@ MIT License
 
 ## 作者
 
-GitHub: your-name
+GitHub: GAWDY
 
 ## 免責事項
 
